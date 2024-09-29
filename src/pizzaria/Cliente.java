@@ -1,11 +1,14 @@
 package pizzaria;
 import java.util.ArrayList;
+import java.util.Scanner;
+
+
 
 public class Cliente extends Usuario {
     private String email;
     private String endereco;
     private String senha;
-    
+    Scanner scanner = new Scanner(System.in);
     
     public Cliente(String nome, String telefone, String email,
     		String endereco, String senha) {
@@ -49,6 +52,15 @@ public class Cliente extends Usuario {
 		}
 	}
 	
-	
+	 private  void  exibirDetalhesClientes (ArrayList<Cliente> clientes) {
+	        System.out.println("\nDetalhes dos clientes cadastrados:");
+	        for (Cliente cliente : clientes) {
+	            System.out.println("Nome: " + cliente.getNome());
+	            System.out.println("Telefone: " + cliente.getTelefone());
+	            System.out.println("Email: " + cliente.getEmail());
+	            System.out.println("Endereço: " + cliente.getEndereco());
+	            System.out.println("-------------------------------");
+	        }
+	    }
 	
 }
