@@ -1,0 +1,2 @@
+module pizzaria {
+}
